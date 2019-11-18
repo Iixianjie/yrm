@@ -1,4 +1,7 @@
 yrm -- YARN registry manager
+
+> 原仓库由于依赖版本，在高node版本下经常会报错，此仓库仅仅是更新依赖后的重提交
+
 ===
 
 [![NPM version][npm-image]][npm-url]
@@ -9,12 +12,12 @@ now include: `npm`, `cnpm`, `taobao`, `nj(nodejitsu)`, `rednpm`, `yarn`.
 ## Install
 
 ```
-$ npm install -g yrm
+$ npm install -g yrm2
 ```
 
 ## Example
 ```
-$ yrm ls
+$ yrm2 ls
 
 * npm -----  https://registry.npmjs.org/
   cnpm ----  http://r.cnpmjs.org/
@@ -27,7 +30,7 @@ $ yrm ls
 ```
 
 ```
-$ yrm use cnpm  //switch registry to cnpm
+$ yrm2 use cnpm  //switch registry to cnpm
 
     Registry has been set to: http://r.cnpmjs.org/
 
@@ -36,7 +39,7 @@ $ yrm use cnpm  //switch registry to cnpm
 ## Usage
 
 ```
-Usage: yrm [options] [command]
+Usage: yrm2 [options] [command]
 
   Commands:
 
