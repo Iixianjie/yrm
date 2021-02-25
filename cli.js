@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+
+
 var path = require('path');
 var fs = require('fs');
 var program = require('commander');
@@ -103,16 +105,16 @@ function onUse(name) {
     var allRegistries = getAllRegistry();
     if (allRegistries.hasOwnProperty(name)) {
         var registry = allRegistries[name];
-        
+
         fs.writeFile(YARNRC, 'registry "' + registry.registry + '"', function (err) {
           if (err) throw err;
           // console.log('It\'s saved!');
-          
+
           printMsg([
               '', '   YARN Registry has been set to: ' + registry.registry, ''
           ]);
         });
-        
+
         // 同时更改npm的源
         npm.load(function (err) {
             if (err) return exit(err);
